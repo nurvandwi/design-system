@@ -1,26 +1,83 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
+@source "../components/**/*.{ts,tsx}";
+@source "../app/**/*.{ts,tsx}";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Map design system tokens to Tailwind v4 color utilities */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Background */
+  --color-bg-page:      var(--bg-page);
+  --color-bg-surface:   var(--bg-surface);
+  --color-bg-elevated:  var(--bg-elevated);
+  --color-bg-disabled:  var(--bg-disabled);
+  --color-bg-primary:   var(--bg-primary);
+  --color-bg-success:   var(--bg-success);
+  --color-bg-error:     var(--bg-error);
+  --color-bg-warning:   var(--bg-warning);
+  --color-bg-info:      var(--bg-info);
+
+  /* Border */
+  --color-border-default:  var(--border-default);
+  --color-border-strong:   var(--border-strong);
+  --color-border-focused:  var(--border-focused);
+  --color-border-disabled: var(--border-disabled);
+  --color-border-primary:  var(--border-primary);
+  --color-border-success:  var(--border-success);
+  --color-border-error:    var(--border-error);
+  --color-border-warning:  var(--border-warning);
+  --color-border-info:     var(--border-info);
+
+  /* Text */
+  --color-text-bold:        var(--text-bold);
+  --color-text-secondary:   var(--text-secondary);
+  --color-text-tertiary:    var(--text-tertiary);
+  --color-text-disabled:    var(--text-disabled);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-text-primary:     var(--text-primary);
+  --color-text-inverse:     var(--text-inverse);
+  --color-text-on-primary:  var(--text-on-primary);
+  --color-text-success:     var(--text-success);
+  --color-text-error:       var(--text-error);
+  --color-text-warning:     var(--text-warning);
+  --color-text-info:        var(--text-info);
+
+  /* Icon */
+  --color-icon-base:        var(--icon-base);
+  --color-icon-secondary:   var(--icon-secondary);
+  --color-icon-disabled:    var(--icon-disabled);
+  --color-icon-primary:     var(--icon-primary);
+  --color-icon-on-primary:  var(--icon-on-primary);
+  --color-icon-success:     var(--icon-success);
+  --color-icon-error:       var(--icon-error);
+  --color-icon-warning:     var(--icon-warning);
+  --color-icon-info:        var(--icon-info);
+
+  /* Button */
+  --color-button-primary:        var(--button-primary);
+  --color-button-primary-hover:  var(--button-primary-hover);
+  --color-button-primary-active: var(--button-primary-active);
+  --color-button-error:          var(--button-error);
+  --color-button-error-hover:    var(--button-error-hover);
+  --color-button-error-active:   var(--button-error-active);
+  --color-button-success:        var(--button-success);
+  --color-button-success-hover:  var(--button-success-hover);
+  --color-button-success-active: var(--button-success-active);
+  --color-button-warning:        var(--button-warning);
+  --color-button-warning-hover:  var(--button-warning-hover);
+  --color-button-warning-active: var(--button-warning-active);
+  --color-button-info:           var(--button-info);
+  --color-button-info-hover:     var(--button-info-hover);
+  --color-button-info-active:    var(--button-info-active);
+  --color-button-disabled:       var(--button-disabled);
+  --color-button-disabled-text:  var(--button-disabled-text);
+  --color-button-text-on-filled: var(--button-text-on-filled);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-page);
+  color: var(--text-bold);
   font-family: Arial, Helvetica, sans-serif;
 }
